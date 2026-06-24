@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Segment Activation Form</title>
+    <link rel="stylesheet" type="text/css" href="https://venturaximages-venturapp.s3.ap-south-1.amazonaws.com/pdf_assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://venturaximages-venturapp.s3.ap-south-1.amazonaws.com/pdf_assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://venturaximages-venturapp.s3.ap-south-1.amazonaws.com/pdf_assets/css/styles2.css">
+    <style>
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+        body {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        .kyc-form {
+            width: 1000px;
+            margin: auto;
+            background: #fff;
+            border: 2px solid #000;
+            padding: 12px;
+        }
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .top-boxes {
+            display: flex;
+            gap: 60px;
+        }
+
+        .top-box {
+            border: 2px solid #000;
+            min-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .black-title {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .sub-note {
+            color: #c00000;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            background: #d9d9d9;
+            border: 1px solid #000;
+            padding: 6px 8px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .newth td,
+        .newth th {
+            border: 1px solid #000;
+            padding: 3px;
+            vertical-align: top;
+        }
+
+        .small-box {
+            width: 26px;
+            height: 26px;
+            border: 1px solid #000;
+            display: inline-block;
+            margin-right: 2px;
+        }
+
+        .input-row {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px 15px;
+            padding: 8px 0;
+        }
+
+        .photo-box {
+            width: 130px;
+            height: 130px;
+            border: 1px solid #000;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .identity-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+
+        .identity-left {
+            flex: 1;
+        }
+
+        .footer-box {
+            border: 1px solid #000;
+            min-height: 80px;
+        }
+
+        .gray {
+            background: #efefef;
+        }
+
+        .date-row {
+            margin-bottom: 10px;
+        }
+
+        .date-label {
+            font-weight: normal;
+            margin-right: 5px;
+        }
+
+        .date-value {
+            text-decoration: underline;
+            color: #1a0dab;
+            margin-left: 5px;
+        }
+
+        .date-line {
+            border-bottom: 1px solid #000;
+            width: 100px;
+            height: 18px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        .address {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .highlight-link {
+            color: #1a0dab;
+            text-decoration: underline;
+        }
+
+        .important-text {
+            color: #1a0dab;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .category-table {
+            border-collapse: collapse;
+            margin: 18px 0 18px 0;
+            width: 320px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .category-table td,
+        .category-table th {
+            border: 1px solid #000;
+            padding: 8px 12px;
+            font-size: 13px;
+            vertical-align: middle;
+        }
+
+        .category-table th {
+            background: #fff;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .client-details {
+            margin-top: 30px;
+            font-size: 13px;
+        }
+
+        .client-details span {
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .client-link {
+            color: #1a0dab;
+            text-decoration: underline;
+        }
+
+        .signature-block {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .signature-label {
+            font-weight: bold;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .signature-line {
+            border-bottom: 1px solid #000;
+            width: 180px;
+            height: 18px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mrg-btm li {
+            margin: 0 0 10px;
+        }
+
+        .main-head {
+            position: absolute;
+            margin: 0 auto;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            text-align: center;
+            color: #fff;
+            width: 80%;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Swis721 Cn BT';">
+    <div style="margin-left: auto; margin-right: auto; width: 880px; page-break-before: always;">
+        <div style="width: 880px; border: 0px solid #ccc !important; background: #EF793D !important; position: relative; height: 1232px; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important;">
+            <div class="bcDetails">
+                <img src="{{ventura_logo}}" width="150">
+                <form class="inptFeild">
+                    <div class="fulWid">
+                        <label>Name of Client</label>
+                        <input type="text" name="" value="{{name}}" style="width: 82%;">
+                    </div>
+                    <div class="fulWid">
+                        <div class="col-50">
+                            <label>Client ID</label>
+                            <input type="text" name="" value="{{client}}" style="width: 75%;">
+                        </div>
+                        <div class="col-50">
+                            <label>Client Code</label>
+                            <input type="text" name="" value="{{client_id}}" style="width: 70%;">
+                        </div>
+                    </div>
+                    <div class="fulWid">
+                        <label>Branch</label>
+                        <input type="text" name="" value="{{branch}}" style="width: 90%;">
+                    </div>
+                </form>
+            </div>
+            <div class="main-head">
+                F&amp;O SEGMENT ACTIVATION DOCUMENTS FOR CLIENTS REGISTERED IN NSE &amp; BSE (INDIVIDUAL)
+            </div>
+            <div class="bcBtm">
+                <p class="venturaTitle">Ventura Securities Limited</p>
+                <p>Client Registration Form - INDIVIDUAL</p>
+                <p>(Equity + Demat + Commodity)</p>
+            </div>
+        </div>
+    </div>
+
+    {{!-- <div style="margin-left: auto; margin-right: auto; width: 880px; height:1235px; page-break-before: always;background: url('https://venturaximages-venturapp.s3.ap-south-1.amazonaws.com/pdf_assets/images/watermark.jpg') no-repeat bottom center !important;">
+        <div style="width: 880px; height: auto; border: 0px solid #ccc !important; padding: 20px;"> --}}
+    <div style="margin-left: auto; margin-right: auto; width: 880px; height: 1235px; page-break-before: always; background: url('https://venturaximages-venturapp.s3.ap-south-1.amazonaws.com/pdf_assets/images/watermark.jpg') no-repeat bottom center !important; box-sizing: border-box; overflow: hidden; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important;">
+        
+        <div style="width: 880px; height: 100%; border: 0px solid #ccc !important; padding: 20px; box-sizing: border-box;">
+            <div style="display: flex; margin-bottom: 10px; justify-content: space-between;">
+                <div style=" width: 50%;text-align: left; margin-bottom: 20px;"><img src="images/ventura-logo.png" width="150"></div>
+            </div>
+
+            <div style="display: flex; margin-bottom: 10px;">
+                <div style="margin: 0; align-items: center; display: flex;">
+                    <label for="vehicle1">Date:</label>
+                </div>
+                <div style="margin: 0; align-items: center; display: flex;">
+                    <input type="text" id="vehicle1" name="vehicle1" value="{{declaration_date}}"
+                        style="font-size: 9px; width: 78%; border-top: 0; border-right: 0; border-bottom: 1px solid #000; border-left: 0; height: 11px; padding: 6px 12px;">
+                </div>
+            </div>
+
+            <div style="width: 43%; padding: 0 20px 0 0;">
+                To,<br>
+                <b>VENTURA SECURITIES LIMITED</b><br>
+                I-Think Techno Campus, "B" Wing, 8th Floor, Pokhran Road No. 2, Off. Eastern Express Highway,
+                Thane (West) - 400607, Maharashtra, India.
+            </div>
+
+            <p style="margin-top:15px;">Dear Sir / Madam,</p>
+            <p style="font-weight: bold;">Sub: Activation of my client code in F&amp;O. Client Code 
+                <input type="text" id="vehicle1" name="vehicle1" value="{{client_id}}" style="font-size: 9px; width: 30%; border-top: 0; border-right: 0; border-bottom: 1px solid #000; border-left: 0; height: 11px; padding: 6px 12px;">
+            </p>
+
+            <p>This has reference to Registration and Account opening Form and stock Broker client / stock Broker, sub-Broker and client tripartite agreements executed by me to carry out trading in shares and securities as per acts, rules bye-laws, regulations and circular governing securities market.</p>
+            <p>I have been trading in cash segment and now I am desirous of trading in F&amp;O. Therefore, I request you to activate my above mentioned ciient code in F&amp;O. I am submitting herewith my financial detail and supporting documents thereof as per requirements laid down in SEBI's circular no. MIRSD/SE/Cir-19/2009 dated December 03,2009 read with NSE's circular no. NSE/INSP/2010/91 dated February 03,2010 (please tick applicable column in financial detail and proof of income documents).</p>
+
+            <div style="padding: 5px; font-size:12px"><b>Financial Details</b></div>
+            <table class="newth">
+                <tr>
+                    <td>Annual Income Range</td>
+                    <td>Below Rs.1 Lakh<p><input type="checkbox"></p></td>
+                    <td>Rs.1 Lakh to below Rs.5 Lakhs<p><input type="checkbox"></p></td>
+                    <td>Rs.5 Lakhs to below Rs.10 Lakh<p><input type="checkbox"></p></td>
+                    <td>Rs.10 Lakhs to below Rs.25 Lakhs<p><input type="checkbox"></p></td>
+                    <td>Above Rs.25 Lakhs<p><input type="checkbox"></p></td>
+                </tr>
+            </table>
+
+            <div style="padding: 5px; font-size:12px; margin-top:10px;"><b>Proof of income document/s enclosed:-</b></div>
+            <ul style="list-style-type: auto; margin-bottom: 10px; padding: 0 20px;">
+                <li>Copy of ITR Acknowledgement</li>
+                <li>Copy of Annual Accounts</li>
+                <li>Copy of Form 16 in case of salary income</li>
+                <li>Net worth certificate</li>
+                <li>Salary Slip</li>
+                <li>Bank account statement for last 6 months</li>
+                <li>Copy of demat account Holding statement</li>
+                <li>Any other relevant documents substantiating ownership of assets</li>
+                <li>Self declaration along with relevant supporting.</li>
+            </ul>
+            <p>Thanking you,</p>
+            <p>Yours truly</p>
+
+            <div style="display: flex; align-items: center; margin-top: 15px;">
+                <div style="margin: 0; align-items: center; display: flex;">
+                    <label for="vehicle1">Signature of the Client :</label>
+                </div>
+                <div style="margin: 0; align-items: center; display: flex;">
+                    <input type="text" id="vehicle1" name="vehicle1" value="" style="font-size: 9px; width: 90%; border-top: 0; border-right: 0; border-bottom: 1px solid #000; border-left: 0; height: 11px; padding: 6px 12px;">
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-top: 15px;">
+                <div style="margin: 0; align-items: center; display: flex; font-size: 10px;">
+                    <label for="vehicle1" style="white-space: nowrap; margin-right: 8px;">
+                        Name of the Client:
+                    </label>
+                </div>
+                <div style="display: inline-grid; vertical-align: middle; align-items: center; font-size: 10px;">
+                    <input type="text" id="vehicle1" name="vehicle1" value="{{name}}" 
+                        oninput="this.parentNode.dataset.value = this.value"
+                        style="grid-area: 1/1; width: 100%; min-width: 50px; font: inherit; font-family: inherit; padding: 2px 0; border: none; border-bottom: 1px solid #000; background: transparent; outline: none; height: 11px;">
+                    <span style="grid-area: 1/1; font: inherit; font-family: inherit; padding: 2px 0; visibility: hidden; white-space: pre;">{{name}}</span>
+                </div>
+            </div>
+            <p style="margin: 15px 0; text-align: center;">1</p>
+        </div>
+    </div>
+
+    <div style="margin-left: auto; margin-right: auto; width: 880px; page-break-before: always;">
+        <div style="width: 880px; border: 0px solid #ccc !important; background: #EF793D !important; background-color: #EF793D !important; position: relative; height: 1232px; padding: 20px; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important;">
+            <img src="{{ventura_front_logo}}" class="forntLogo">
+            <p class="frtAdrs">Ventura Securities Limited, I-Think Techno Campus, “B” Wing, 8th Floor, Pokhran Road No. 2, Off. Eastern Express Highway, Thane (West)-400 607, Maharashtra.</p>
+        </div>
+    </div>
+</body>
+
+</html>
